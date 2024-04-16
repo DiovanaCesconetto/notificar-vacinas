@@ -1,0 +1,8 @@
+{
+  "name": "NotificarVacinas",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular",
+  "id": "ebfcb155"
+}
