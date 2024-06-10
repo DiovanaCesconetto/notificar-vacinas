@@ -1,6 +1,6 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title> Cadastro da criança </ion-title>
+    <ion-title> </ion-title>
     <link rel="stylesheet" href="tab2.page.scss" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -14,37 +14,88 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Cadastro da criança</ion-title>
+      <!--<ion-title size="large">Cadastro da criança</ion-title> -->
     </ion-toolbar>
   </ion-header>
-  <form>
-    <ion-list>
-      <ion-item>
-        <ion-input
-          label="Nome"
-          labelPlacement="floating"
-          placeholder=""
-        ></ion-input>
-      </ion-item>
 
-      <ion-item>
-        <ion-input
-          label="Data de nascimento"
-          labelPlacement="floating"
-          type="date"
-          placeholder=""
-        ></ion-input>
-      </ion-item>
+  <ion-content>
 
-      <ion-item>
-        <ion-input
-          label="CPF"
-          labelPlacement="floating"
-          placeholder=""
-        ></ion-input>
-      </ion-item>
-    </ion-list>
+    <ion-grid class="grid1">
 
-    <ion-button shape="round">Cadastrar Criança</ion-button>
-  </form>
-</ion-content>
+      <ion-row class="row1">
+        <ion-col> </ion-col>
+      </ion-row>
+
+      <ion-row class="row2">
+        <ion-col> </ion-col>
+      </ion-row>
+    </ion-grid>
+
+  <ion-slides>  
+    <ion-slide>
+      <div class="contaier">
+        <ion-grid>
+          <ion-row>
+            <ion-col>
+              <h1>Cadastro da Criança</h1>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+          
+            <ion-col>
+              <ion-list lines="none">
+                <ion-item>
+                  <!-- <ion-icon name="person" class="icon-login"></ion-icon> -->
+                  <ion-input
+                    label="Nome"
+                    type="text"
+                    labelPlacement="floating"
+                    required
+                    placeholder=""
+                  ></ion-input>
+                </ion-item>
+                <br />
+                <ion-item>
+                  <!-- <ion-icon name="lock" class="icon-login"></ion-icon> -->
+                  <ion-input
+                    label="Data de Nascimento"
+                    type="date"
+                    labelPlacement="floating"
+                    required
+                    placeholder=""
+                  ></ion-input>
+                </ion-item>
+                <br />
+                <ion-item>
+                  <!-- <ion-icon name="lock" class="icon-login"></ion-icon> -->
+                  <ion-input
+                    label="CPF"
+                    type="text"
+                    labelPlacement="floating"
+                    required
+                    placeholder=""
+                  ></ion-input>
+                </ion-item>
+              </ion-list>
+            </ion-col>
+           
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <ion-button
+                shape="round"
+                type="submit"
+                fill="solid"
+                expand="full"
+              >
+                Cadastrar Criança
+              </ion-button>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </div>
+    </ion-slide>
+  </ion-slides>
+    <!-- <ion-button shape="round">Cadastrar Criança</ion-button> -->
+  </ion-content></ion-content
+>

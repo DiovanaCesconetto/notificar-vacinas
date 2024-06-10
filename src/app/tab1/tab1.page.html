@@ -1,38 +1,81 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Home
-    </ion-title>
+   <!-- <ion-title> Home </ion-title> -->
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Vacina</ion-title>
+      <!-- <ion-title size="large">Vacina</ion-title> -->
     </ion-toolbar>
   </ion-header>
- 
+
+  <img alt="Silhouette of mountains" src="assets/logo.png" class="foto" />
+
   <ion-card>
-    <img alt="Silhouette of mountains" src="assets/logo.png" />
     <ion-card-header>
       <ion-card-title>Sejam Bem-Vindos</ion-card-title>
       <ion-card-subtitle></ion-card-subtitle>
     </ion-card-header>
-  
-    <ion-card-content>
-      É com grande satisfação que apresentamos nosso aplicativo dedicado a auxiliar e conscientizar as mães
-       sobre as datas cruciais para a imunização de seus bebês. Reconhecendo a importância da vacinação na proteção da saúde infantil,
-        nossa plataforma tem como objetivo principal fornecer um sistema de alerta eficaz e informativo para garantir que cada criança 
-        receba as vacinas essenciais no momento adequado.
 
-      A imunização é um dos pilares fundamentais da saúde pública, protegendo não apenas as crianças individualmente, mas também contribuindo
-       para a proteção de toda a comunidade contra doenças infecciosas. Entretanto, compreendemos que acompanhar o calendário de vacinação pode ser
-        uma tarefa desafiadora para as mães, especialmente durante os primeiros meses de vida do bebê, quando diversas vacinas são necessárias em intervalos
-         específicos.
+    <ion-card-content>
+      <p>
+        Apresentamos nosso aplicativo que é dedicado a auxiliar e conscientizar
+        as mães sobre as datas cruciais para a imunização de seus bebês. Ele
+        destaca a importância da vacinação na proteção da saúde infantil,
+        fornecendo um sistema informativo para garantir que cada criança receba
+        vacinas essenciais no momento adequado.
+      </p>
+      <br/>
+      <p>
+        A imunização é crucial para a saúde pública, protegendo crianças e a
+        comunidade contra doenças infecciosas. No entanto, acompanhar o
+        calendário de vacinação pode ser desafiador para as mães, especialmente
+        nos primeiros meses do bebê, quando várias vacinas são necessárias em
+        intervalos específicos.
+      </p>
     </ion-card-content>
   </ion-card>
-<!-- 
+
+  <ion-card class="formulario">
+    <ion-card-header>
+      <ion-card-title class="titulo">Entre com seu login</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-list lines="none">
+        <ion-item>
+          <ion-icon name="person" class="icon-login"></ion-icon>
+          <ion-input
+            label="Email"
+            type="text"
+            labelPlacement="floating"
+            required
+            placeholder=""
+          ></ion-input>
+        </ion-item>
+        <br />
+        <ion-item>
+          <ion-icon name="lock-closed-outline"></ion-icon>
+          <ion-input
+            label="Senha"
+            type="password"
+            labelPlacement="floating"
+            required
+            placeholder=""
+          ></ion-input>
+        </ion-item>
+      </ion-list>
+        <br/>
+      <ion-button shape="round" type="submit" fill="solid" expand="full">
+        Entrar
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- 
   <app-explore-container name="xx
   "></app-explore-container>
 </ion-content> -->
+</ion-content>

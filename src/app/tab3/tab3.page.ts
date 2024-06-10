@@ -6,11 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['tab3.page.scss'],
 })
 export class Tab3Page {
-  expanded: boolean = false;
+  expandedIndex: number = -1;
+
 
   constructor() {}
 
-  toggleExpand() {
-    this.expanded = !this.expanded;
-  }
+  toggleExpand(index: number) {
+    this.expandedIndex = this.expandedIndex === index ? -1 : index;
 }
+}
+

@@ -1,11 +1,64 @@
-    ion-item {
-      margin-bottom: 20px;
-      border-radius: 10px;
-      
-    }
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+
+* {
+  font-family: 'Rubik', sans-serif;
+}
+
+
+body, ion-content {
+  --ion-background-color: hwb(105 87% 0%);
+}
+
+
+ion-toolbar {
+  --background: hwb(105 87% 0%);
+  --color: #10430a;
+}
+
+ion-title {
+  color: #10430a;
+  font-weight: bold;
+}
+
+
+h1 {
+  color: #10430a;
+  text-align: center;
+  font-weight: bold;
+  font-size: 32px;
+}
+
+
+ion-item {
+  --color: #10430a;
+}
+
+ion-input {
+  --placeholder-color: #10430a;
+  --highlight-color-focused: #10430a;
+}
+
+
+ion-button {
+  --background: #10430a;
+  --color: white;
+  font-size: 18px;
+}
+
+
+.container {
+  padding: 20px;
+  background-color: hwb(105 87% 0%);
+}
+
+ion-list {
+  background-color: hwb(105 87% 0%);
   
-    ion-button {
-      --background: #b9ffb3;
-      --color: #194225;
-      
-    }
+}
+
+ion-item ion-input {
+  --color: #7ba775;
+    
+}

@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+* {
+    font-family: 'Rubik', sans-serif;
+  }
+  
+ion-header {
+    --ion-background-color: hwb(105 87% 0%);
+    --ion-color-base: #ffffff; 
+  }
+  
+  body, ion-content{
+    --ion-background-color: hwb(105 87% 0%);
+  }
+ 
+  ion-toolbar {
+    --background: hwb(105 87% 0%);
+    --color: #10430a;
+  }
+  
+  ion-title {
+    color: #10430a;
+    text-align: center;
+    font-weight: bold;
+    font-size: 32px;
+  }
+ 
+  .expandable {
+    margin-bottom: 20px; 
+    
+  }
+  
+ 
+  .expandable h2 {
+    color: #10430a; 
+    font-family: 'Rubik', sans-serif; 
+    font-size: 26px; 
+    display: flex; 
+    align-items: center;
+  } 
+  
+  
+  .expandable ion-icon {
+    color: #10430a; 
+    font-size: 26px;
+  }
+  
+  p {
+    color: hsl(0, 0%, 0%);
+    font-size: 20px;
+  }

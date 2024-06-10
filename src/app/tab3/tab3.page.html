@@ -1,251 +1,271 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title> Vacinas </ion-title>
+    <!-- <ion-title> Vacinas </ion-title> -->
+    <link rel="stylesheet" href="tab3.page.scss" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <div class="expandable" (click)="toggleExpand()">
-    <h2>Ao nascer <ion-icon name="chevron-down-circle-outline"></ion-icon></h2>
-  </div>
-  <div *ngIf="expanded">
-    <p>
-      Vacina BCG (Dose única) Doenças evitadas: formas graves da tuberculose
-      (miliar e meníngea)
-    </p>
-    <p>Vacina Hepatite B (recombinante HB) Doenças evitadas: Hepatite B</p>
-  </div>
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title>Vacinas</ion-title>
+    </ion-toolbar>
+  </ion-header>
 
-  <div class="expandable" (click)="toggleExpand()">
-    <h2>2 meses <ion-icon name="chevron-down-circle-outline"></ion-icon></h2>
-  </div>
-  <div *ngIf="expanded">
-    <p>
-      Vacina adsorvida Difteria, Tétano, Pertussis, Hepatite B (recombinante) e
-      Haemophilus influenzae B (conjugada) - (Penta) (1ª dose) Doenças evitadas:
-      Difteria, Tétano, Coqueluche, Hepatite B e infecções causadas pelo
-      Haemophilus influenzae B
-    </p>
-    <p>
-      Vacina poliomielite 1, 2 e 3 (inativada) - (VIP) (1ª dose) Doenças
-      evitadas: Poliomielite
-    </p>
-    <p>
-      Vacina pneumocócica 10-valente (Conjugada) - (Pneumo 10) (1ª dose) Doenças
-      evitadas: infecções invasivas (como meningite e pneumonia) e otite média
-      aguda, causadas pelos 10 sorotipos de Streptococus pneumoniae
-    </p>
-    <p>
-      Vacina rotavírus humano G1P1 [8] (atenuada) - (VRH) (1ª dose) Doenças
-      evitadas: diarreia por rotavírus (Gastroenterites)
-    </p>
-  </div>
+  <ion-content>
+    <div class="expandable" (click)="toggleExpand(0)">
+      <h2>
+        Ao nascer <ion-icon name="chevron-down-circle-outline"></ion-icon>
+      </h2>
+    </div>
+    <div *ngIf="expandedIndex === 0">
+      <p>
+        Vacina BCG (Dose única) Doenças evitadas: formas graves da tuberculose
+        (miliar e meníngea)
+      </p>
+      <p>Vacina Hepatite B (recombinante HB) Doenças evitadas: Hepatite B</p>
+    </div>
 
-  <div class="expandable" (click)="toggleExpand()">
-    <h2>3 meses <ion-icon name="chevron-down-circle-outline"></ion-icon></h2>
-  </div>
-  <div *ngIf="expanded">
-    <p>
-      Vacina meningocócica C (conjugada) - (Meningo C) (1ª dose) Doenças
-      evitadas: doença invasiva causada pela Neisseria meningitidis do sorogrupo
-      C
-    </p>
-  </div>
+    <div class="expandable" (click)="toggleExpand(1)">
+      <h2>2 meses <ion-icon name="chevron-down-circle-outline"></ion-icon></h2>
+    </div>
+    <div *ngIf="expandedIndex === 1">
+      <p>
+        Vacina adsorvida Difteria, Tétano, Pertussis, Hepatite B (recombinante)
+        e Haemophilus influenzae B (conjugada) - (Penta) (1ª dose) Doenças
+        evitadas: Difteria, Tétano, Coqueluche, Hepatite B e infecções causadas
+        pelo Haemophilus influenzae B
+      </p>
+      <p>
+        Vacina poliomielite 1, 2 e 3 (inativada) - (VIP) (1ª dose) Doenças
+        evitadas: Poliomielite
+      </p>
+      <p>
+        Vacina pneumocócica 10-valente (Conjugada) - (Pneumo 10) (1ª dose)
+        Doenças evitadas: infecções invasivas (como meningite e pneumonia) e
+        otite média aguda, causadas pelos 10 sorotipos de Streptococus
+        pneumoniae
+      </p>
+      <p>
+        Vacina rotavírus humano G1P1 [8] (atenuada) - (VRH) (1ª dose) Doenças
+        evitadas: diarreia por rotavírus (Gastroenterites)
+      </p>
+    </div>
 
-  <div class="expandable" (click)="toggleExpand()">
-    <h2>4 meses <ion-icon name="chevron-down-circle-outline"></ion-icon></h2>
-  </div>
-  <div *ngIf="expanded">
-    <p>
-      Vacina adsorvida Difteria, Tétano, pertussis, Hepatite B (recombinante) e
-      Haemophilus influenzae B (conjugada) - (Penta) (2ª dose) Doenças evitadas:
-      Difteria, Tétano, Coqueluche, Hepatite B e infecções causadas pelo
-      Haemophilus influenzae B
-    </p>
-    <p>
-      Vacina poliomielite 1, 2 e 3 (inativada) - (VIP) (2ª dose) Doenças
-      evitadas: Poliomielite
-    </p>
-    <p>
-      Vacina pneumocócica 10-valente (Conjugada) - (Pneumo 10) (2ª dose) Doenças
-      evitadas: infecções invasivas (como meningite e pneumonia) e otite média
-      aguda, causadas pelos 10 sorotipos de Streptococus pneumoniae
-    </p>
-    <p>
-      Vacina rotavírus humano G1P1 [8] (atenuada) - (VRH) (2ª dose) Doenças
-      evitadas: diarreia por rotavírus (Gastroenterites)
-    </p>
-  </div>
+    <div class="expandable" (click)="toggleExpand(2)">
+      <h2>3 meses <ion-icon name="chevron-down-circle-outline"></ion-icon></h2>
+    </div>
+    <div *ngIf="expandedIndex === 2">
+        <p>
+        Vacina meningocócica C (conjugada) - (Meningo C) (1ª dose) Doenças
+        evitadas: doença invasiva causada pela Neisseria meningitidis do
+        sorogrupo C
+      </p>
+    </div>
 
-  <div class="expandable" (click)="toggleExpand()">
-    <h2>5 meses <ion-icon name="chevron-down-circle-outline"></ion-icon></h2>
-  </div>
-  <div *ngIf="expanded">
-    <p>
-      Vacina meningocócica C (conjugada) - (Meningo C) (2ª dose) Doenças
-      evitadas: doença invasiva causada pela Neisseria meningitidis do sorogrupo
-      C
-    </p>
-  </div>
+    <div class="expandable" (click)="toggleExpand(3)">
+      <h2>4 meses <ion-icon name="chevron-down-circle-outline"></ion-icon></h2>
+    </div>
+    <div *ngIf="expandedIndex === 3">  
+      <p>
+        Vacina adsorvida Difteria, Tétano, pertussis, Hepatite B (recombinante)
+        e Haemophilus influenzae B (conjugada) - (Penta) (2ª dose) Doenças
+        evitadas: Difteria, Tétano, Coqueluche, Hepatite B e infecções causadas
+        pelo Haemophilus influenzae B
+      </p>
+      <p>
+        Vacina poliomielite 1, 2 e 3 (inativada) - (VIP) (2ª dose) Doenças
+        evitadas: Poliomielite
+      </p>
+      <p>
+        Vacina pneumocócica 10-valente (Conjugada) - (Pneumo 10) (2ª dose)
+        Doenças evitadas: infecções invasivas (como meningite e pneumonia) e
+        otite média aguda, causadas pelos 10 sorotipos de Streptococus
+        pneumoniae
+      </p>
+      <p>
+        Vacina rotavírus humano G1P1 [8] (atenuada) - (VRH) (2ª dose) Doenças
+        evitadas: diarreia por rotavírus (Gastroenterites)
+      </p>
+    </div>
 
-  <div class="expandable" (click)="toggleExpand()">
-    <h2>6 meses <ion-icon name="chevron-down-circle-outline"></ion-icon></h2>
-  </div>
-  <div *ngIf="expanded">
-    <p>
-      Vacina adsorvida Difteria, Tétano, pertussis, Hepatite B (recombinante) e
-      Haemophilus influenzae B (conjugada) - (Penta) (3ª dose) Doenças evitadas:
-      Difteria, Tétano, Coqueluche, Hepatite B e infecções causadas pelo
-      Haemophilus influenzae B
-    </p>
-    <p>
-      Vacina poliomielite 1, 2 e 3 (inativada) - (VIP) (3ª dose) Doenças
-      evitadas: Poliomielite
-    </p>
-    <p>
-      Vacina Influenza (1 ou 2 doses (anual)) Doenças evitadas: infecções pelo
-      vírus influenza
-    </p>
-    <p>
-      Vacina Covid-19 (1ª dose) Doenças evitadas: as formas graves e
-      complicações pela covid-19 Obs.: A vacina Covid-19 está recomendada com
-      esquema de 03 doses (aos 06, 07 e 09 meses de idade). Caso não tenha
-      iniciado e/ou completado o esquema primário até os 09 meses de idade, a
-      vacina poderá ser administrada até 04 anos, 11 meses e 29 dias, conforme
-      histórico vacinal, respeitando os intervalos mínimos recomendados (04
-      semanas entre a 1ª e 2ª dose; e 08 semanas entre a 2ª e 3ª dose).
-    </p>
-  </div>
+    <div class="expandable" (click)="toggleExpand(4)">
+      <h2>5 meses <ion-icon name="chevron-down-circle-outline"></ion-icon></h2>
+    </div>
+    <div *ngIf="expandedIndex === 4">    
+     <p>
+        Vacina meningocócica C (conjugada) - (Meningo C) (2ª dose) Doenças
+        evitadas: doença invasiva causada pela Neisseria meningitidis do
+        sorogrupo C
+      </p>
+    </div>
 
-  <div class="expandable" (click)="toggleExpand()">
-    <h2>7 meses <ion-icon name="chevron-down-circle-outline"></ion-icon></h2>
-  </div>
-  <div *ngIf="expanded">
-    <p>
-      Vacina Covid-19 (2ª dose) Doenças evitadas: as formas graves e
-      complicações pela covid-19 Obs.: A vacina Covid-19 está recomendada com
-      esquema de 03 doses (aos 06, 07 e 09 meses de idade). Caso não tenha
-      iniciado e/ou completado o esquema primário até os 09 meses de idade, a
-      vacina poderá ser administrada até 04 anos, 11 meses e 29 dias, conforme
-      histórico vacinal, respeitando os intervalos mínimos recomendados (04
-      semanas entre a 1ª e 2ª dose; e 08 semanas entre a 2ª e 3ª dose).
-    </p>
-  </div>
+    <div class="expandable" (click)="toggleExpand(5)">
+      <h2>6 meses <ion-icon name="chevron-down-circle-outline"></ion-icon></h2>
+    </div>
+    <div *ngIf="expandedIndex === 5"> 
+      <p>
+        Vacina adsorvida Difteria, Tétano, pertussis, Hepatite B (recombinante)
+        e Haemophilus influenzae B (conjugada) - (Penta) (3ª dose) Doenças
+        evitadas: Difteria, Tétano, Coqueluche, Hepatite B e infecções causadas
+        pelo Haemophilus influenzae B
+      </p>
+      <p>
+        Vacina poliomielite 1, 2 e 3 (inativada) - (VIP) (3ª dose) Doenças
+        evitadas: Poliomielite
+      </p>
+      <p>
+        Vacina Influenza (1 ou 2 doses (anual)) Doenças evitadas: infecções pelo
+        vírus influenza
+      </p>
+      <p>
+        Vacina Covid-19 (1ª dose) Doenças evitadas: as formas graves e
+        complicações pela covid-19 Obs.: A vacina Covid-19 está recomendada com
+        esquema de 03 doses (aos 06, 07 e 09 meses de idade). Caso não tenha
+        iniciado e/ou completado o esquema primário até os 09 meses de idade, a
+        vacina poderá ser administrada até 04 anos, 11 meses e 29 dias, conforme
+        histórico vacinal, respeitando os intervalos mínimos recomendados (04
+        semanas entre a 1ª e 2ª dose; e 08 semanas entre a 2ª e 3ª dose).
+      </p>
+    </div>
 
-  <div class="expandable" (click)="toggleExpand()">
-    <h2>9 meses <ion-icon name="chevron-down-circle-outline"></ion-icon></h2>
-  </div>
-  <div *ngIf="expanded">
-    <p>
-      Vacina Febre Amarela (atenuada) - (FA) (1 dose) Doenças evitadas: Febre
-      Amarela
-    </p>
-    <p>
-      Vacina Covid-19 (3ª dose) Doenças evitadas: as formas graves e
-      complicações pela covid-19 Obs.: A vacina Covid-19 está recomendada com
-      esquema de 03 doses (aos 06, 07 e 09 meses de idade). Caso não tenha
-      iniciado e/ou completado o esquema primário até os 09 meses de idade, a
-      vacina poderá ser administrada até 04 anos, 11 meses e 29 dias, conforme
-      histórico vacinal, respeitando os intervalos mínimos recomendados (04
-      semanas entre a 1ª e 2ª dose; e 08 semanas entre a 2ª e 3ª dose).
-    </p>
-  </div>
+    <div class="expandable" (click)="toggleExpand(6)">
+      <h2>7 meses <ion-icon name="chevron-down-circle-outline"></ion-icon></h2>
+    </div>
+    <div *ngIf="expandedIndex === 6">
+      <p>
+        Vacina Covid-19 (2ª dose) Doenças evitadas: as formas graves e
+        complicações pela covid-19 Obs.: A vacina Covid-19 está recomendada com
+        esquema de 03 doses (aos 06, 07 e 09 meses de idade). Caso não tenha
+        iniciado e/ou completado o esquema primário até os 09 meses de idade, a
+        vacina poderá ser administrada até 04 anos, 11 meses e 29 dias, conforme
+        histórico vacinal, respeitando os intervalos mínimos recomendados (04
+        semanas entre a 1ª e 2ª dose; e 08 semanas entre a 2ª e 3ª dose).
+      </p>
+    </div>
 
-  <div class="expandable" (click)="toggleExpand()">
-    <h2>12 meses <ion-icon name="chevron-down-circle-outline"></ion-icon></h2>
-  </div>
-  <div *ngIf="expanded">
-    <p>
-      Vacina pneumocócica 10-valente (Conjugada) - (Pneumo 10) (Reforço) Doenças
-      evitadas: infecções invasivas (como meninigite, pneumonia e otite média
-      aguda), causadas pelos 10 sorotipos Streptococus pneumoniae
-    </p>
-    <p>
-      Vacina meningocócica C (conjugada) - (Meningo C) (Reforço) Doenças
-      evitadas: doença invasiva causada pela Neisseria meningitidis do sorogrupo
-      C
-    </p>
-    <p>
-      Vacina Sarampo, Caxumba, Rubéola (Tríplice viral) (1ª dose) Doenças
-      evitadas: Sarampo, Caxumba e Rubéola
-    </p>
-  </div>
+    <div class="expandable" (click)="toggleExpand(7)">
+      <h2>9 meses <ion-icon name="chevron-down-circle-outline"></ion-icon></h2>
+    </div>
+    <div *ngIf="expandedIndex === 7">
+      <p>
+        Vacina Febre Amarela (atenuada) - (FA) (1 dose) Doenças evitadas: Febre
+        Amarela
+      </p>
+      <p>
+        Vacina Covid-19 (3ª dose) Doenças evitadas: as formas graves e
+        complicações pela covid-19 Obs.: A vacina Covid-19 está recomendada com
+        esquema de 03 doses (aos 06, 07 e 09 meses de idade). Caso não tenha
+        iniciado e/ou completado o esquema primário até os 09 meses de idade, a
+        vacina poderá ser administrada até 04 anos, 11 meses e 29 dias, conforme
+        histórico vacinal, respeitando os intervalos mínimos recomendados (04
+        semanas entre a 1ª e 2ª dose; e 08 semanas entre a 2ª e 3ª dose).
+      </p>
+    </div>
 
-  <div class="expandable" (click)="toggleExpand()">
-    <h2>15 meses <ion-icon name="chevron-down-circle-outline"></ion-icon></h2>
-  </div>
-  <div *ngIf="expanded">
-    <p>
-      Vacina adsorvida Difteria, Tétano e pertussis (DTP) (1º reforço) Doenças
-      evitadas: Difteria, Tétano, Coqueluche
-    </p>
-    <p>
-      Vacina poliomielite 1 e 3 (atenuada) - (VOPb) (1º reforço) Doenças
-      evitadas: Poliomielite
-    </p>
-    <p>
-      Vacina adsorvida Hepatite A (HA - inativada) (1 dose) Doenças evitadas:
-      Hepatite A
-    </p>
-    <p>
-      Vacina Tetra viral (1 dose) Doenças evitadas: Sarampo, Caxumba, Rubéola e
-      varicela
-    </p>
-  </div>
+    <div class="expandable" (click)="toggleExpand(8)">
+      <h2>12 meses <ion-icon name="chevron-down-circle-outline"></ion-icon></h2>
+    </div>
+    <div *ngIf="expandedIndex === 8">   
+       <p>
+        Vacina pneumocócica 10-valente (Conjugada) - (Pneumo 10) (Reforço)
+        Doenças evitadas: infecções invasivas (como meninigite, pneumonia e
+        otite média aguda), causadas pelos 10 sorotipos Streptococus pneumoniae
+      </p>
+      <p>
+        Vacina meningocócica C (conjugada) - (Meningo C) (Reforço) Doenças
+        evitadas: doença invasiva causada pela Neisseria meningitidis do
+        sorogrupo C
+      </p>
+      <p>
+        Vacina Sarampo, Caxumba, Rubéola (Tríplice viral) (1ª dose) Doenças
+        evitadas: Sarampo, Caxumba e Rubéola
+      </p>
+    </div>
 
-  <div class="expandable" (click)="toggleExpand()">
-    <h2>4 anos <ion-icon name="chevron-down-circle-outline"></ion-icon></h2>
-  </div>
-  <div *ngIf="expanded">
-    <p>
-      Vacina adsorvida Difteria, Tétano e pertussis (DTP) (2º reforço) Doenças
-      evitadas: Difteria, Tétano, Coqueluche
-    </p>
-    <p>
-      Vacina Febre Amarela (atenuada) (Reforço) Doenças evitadas: Febre Amarela
-    </p>
-    <p>
-      Vacina poliomielite 1 e 3 (atenuada) - (VOPb) (2º reforço) Doenças
-      evitadas: Poliomielite
-    </p>
-    <p>
-      Vacina varicela (monovalente) - (Varicela) (1 dose) Doenças evitadas:
-      Varicela
-    </p>
-  </div>
+    <div class="expandable" (click)="toggleExpand(9)">
+      <h2>15 meses <ion-icon name="chevron-down-circle-outline"></ion-icon></h2>
+    </div>
+    <div *ngIf="expandedIndex === 9">     
+      <p>
+        Vacina adsorvida Difteria, Tétano e pertussis (DTP) (1º reforço) Doenças
+        evitadas: Difteria, Tétano, Coqueluche
+      </p>
+      <p>
+        Vacina poliomielite 1 e 3 (atenuada) - (VOPb) (1º reforço) Doenças
+        evitadas: Poliomielite
+      </p>
+      <p>
+        Vacina adsorvida Hepatite A (HA - inativada) (1 dose) Doenças evitadas:
+        Hepatite A
+      </p>
+      <p>
+        Vacina Tetra viral (1 dose) Doenças evitadas: Sarampo, Caxumba, Rubéola
+        e varicela
+      </p>
+    </div>
 
-  <div class="expandable" (click)="toggleExpand()">
-    <h2>5 anos <ion-icon name="chevron-down-circle-outline"></ion-icon></h2>
-  </div>
-  <div *ngIf="expanded">
-    <p>
-      Vacina Febre Amarela (atenuada) - (FA) (1 dose, caso a criança não tenha
-      recebido as 2 doses recomendadas antes de completar 5 anos) Doenças
-      evitadas: Febre Amarela
-    </p>
-    <p>
-      Vacina pneumocócica 23-valente - (Pneumo 23) (1 dose) Doenças evitadas:
-      infecções invasivas pelo pneumococo na população indígena
-    </p>
-  </div>
+    <div class="expandable" (click)="toggleExpand(10)">
+      <h2>4 anos <ion-icon name="chevron-down-circle-outline"></ion-icon></h2>
+    </div>
+    <div *ngIf="expandedIndex === 10">    
+      <p>
+        Vacina adsorvida Difteria, Tétano e pertussis (DTP) (2º reforço) Doenças
+        evitadas: Difteria, Tétano, Coqueluche
+      </p>
+      <p>
+        Vacina Febre Amarela (atenuada) (Reforço) Doenças evitadas: Febre
+        Amarela
+      </p>
+      <p>
+        Vacina poliomielite 1 e 3 (atenuada) - (VOPb) (2º reforço) Doenças
+        evitadas: Poliomielite
+      </p>
+      <p>
+        Vacina varicela (monovalente) - (Varicela) (1 dose) Doenças evitadas:
+        Varicela
+      </p>
+    </div>
 
-  <div class="expandable" (click)="toggleExpand()">
-    <h2>
-      9 e 10 anos <ion-icon name="chevron-down-circle-outline"></ion-icon>
-    </h2>
-  </div>
-  <div *ngIf="expanded">
-    <p>
-      Vacina HPV Papilomavírus humano 6, 11, 16 e 18 (HPV4 - recombinante) (Dose
-      única) Doenças evitadas: Papilomavírus Humano 6, 11, 16 e 18 Obs.: Para
-      vítimas de abuso sexual, de 9 a 14 anos a recomendação é de duas doses. De
-      15 a 45, a recomendação é de três doses, considerando o histórico vacinal
-      contra o HPV. Pessoas com HIV/aids, transplantadas de órgãos sólidos e de
-      medula óssea, pacientes com câncer e aqueles com papilomatose respiratória
-      recorrente (PPR) devem tomar três doses, com prescrição médica. Para
-      menores de 18 anos, é necessário consentimento dos pais ou responsáveis
-      para a vacinação contra o HPV como tratamento adjuvante da PPR. O
-      intervalo entre as doses deve ser confirmado na UBS.
-    </p>
-  </div>
+    <div class="expandable" (click)="toggleExpand(11)">
+      <h2>5 anos <ion-icon name="chevron-down-circle-outline"></ion-icon></h2>
+    </div>
+    <div *ngIf="expandedIndex === 11">
+      <p>
+        Vacina Febre Amarela (atenuada) - (FA) (1 dose, caso a criança não tenha
+        recebido as 2 doses recomendadas antes de completar 5 anos) Doenças
+        evitadas: Febre Amarela
+      </p>
+      <p>
+        Vacina pneumocócica 23-valente - (Pneumo 23) (1 dose) Doenças evitadas:
+        infecções invasivas pelo pneumococo na população indígena
+      </p>
+    </div>
+
+    <div class="expandable" (click)="toggleExpand(12)">
+      <h2>
+        9 e 10 anos <ion-icon name="chevron-down-circle-outline"></ion-icon>
+      </h2>
+    </div>
+    <div *ngIf="expandedIndex === 12">
+          <p>
+        Vacina HPV Papilomavírus humano 6, 11, 16 e 18 (HPV4 - recombinante)
+        (Dose única) Doenças evitadas: Papilomavírus Humano 6, 11, 16 e 18 Obs.:
+        Para vítimas de abuso sexual, de 9 a 14 anos a recomendação é de duas
+        doses. De 15 a 45, a recomendação é de três doses, considerando o
+        histórico vacinal contra o HPV. Pessoas com HIV/aids, transplantadas de
+        órgãos sólidos e de medula óssea, pacientes com câncer e aqueles com
+        papilomatose respiratória recorrente (PPR) devem tomar três doses, com
+        prescrição médica. Para menores de 18 anos, é necessário consentimento
+        dos pais ou responsáveis para a vacinação contra o HPV como tratamento
+        adjuvante da PPR. O intervalo entre as doses deve ser confirmado na UBS.
+      </p>
+    </div>
+  </ion-content>
 </ion-content>
